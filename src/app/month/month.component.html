@@ -1,0 +1,20 @@
+<h2>支出一覧</h2>
+<table>
+  <tr>
+    <th>会計日時</th>
+    <th>費目</th>
+    <th>金額</th>
+  </tr>
+
+  <tr class="expenses-item" *ngFor="let expense of expensesAllMonth | async">
+    <td>{{ expense.date }}</td>
+    <td>{{ expense.e_name }}</td>
+    <td>{{ expense.price }}</td>
+
+    <td>
+      <button>DELETE</button>
+    </td>
+  </tr>
+
+
+</table>
